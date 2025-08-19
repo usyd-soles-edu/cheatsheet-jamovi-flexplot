@@ -1,0 +1,126 @@
+---
+title: Using `flexplot` to model plots in Jamovi
+subtitle: A video cheatsheet
+description: The University of Sydney
+resources: 
+  - penguins.csv
+---
+
+## About
+This cheatsheet provides a quick reference for using the `flexplot` Module in Jamovi to create plots by specifying a formula. Depending on the variable types and the specified formula, `flexplot` can generate a variety of plot types, including scatter plots, and box plots, automatically.
+
+#### Assumed knowledge
+
+- Jamovi has been installed and is ready to use. This cheatsheet uses Jamovi 2.7.4.0.
+- Basic understanding of statistical concepts and terminology. For example, understanding the difference between categorical and continuous variables.
+- Basic knowledge of how to create model formulas e.g. $y \sim x$
+
+
+## Data
+
+We will use the well-known penguins dataset from the `palmerpenguins` R package. The dataset has been exported from the package in a format that Jamovi can read (.csv). 
+
+<a class="btn btn-outline-primary" href="penguins.csv" download>
+  <i class="bi bi-download" aria-hidden="true"></i> Download penguins.csv
+</a>
+
+## Install the `flexplot` module
+
+If you have not already installed the `flexplot` module, you can do so by following these steps:
+
+1. Open the **Modules** tab in Jamovi.
+2. Click on **Jamovi Library**.
+3. Search for `flexplot` and click **Install**.
+
+{{< video assets/20250819-jamovi_flexplot_install.mp4 >}}
+
+
+## Import data
+
+1. Click the <i class="bi bi-list" aria-hidden="true"></i> **hamburger menu** at the top-left of the Jamovi window.
+2. Select **Open** to open the file dialog.
+3. In the dialogue, navigate to the folder where you saved `penguins.csv` and click **Open**.
+
+{{< video assets/20250819-jamovi_open_penguins.mp4 >}}
+
+## Plot
+
+### Recalling formulae syntax
+
+In most cases, general linear models can be described using  a standardised formula syntax. For a response variable that is influenced by a certain predictor variable, the formula would be:
+
+$$Y \sim X$$
+
+which corressponds to the statement
+
+> The response $Y$ is predicted by $X$
+
+$$response \sim predictor$$
+
+
+### Plotting
+
+1. In the **Analysis** tab, click on the **Flexplot** option.
+2. Select the **response variable** and drag it to the "Outcome variable" box.
+3. Select the **predictor variable** and drag it to the "Predictor variable" box.
+4. Tinker with the plot options to customise the behaviour of the plot.
+
+### Examples
+
+#### Single continuous $Y$
+This produces a histogram or boxplot
+
+#### Continuous $Y$, continuous $X$
+This produces a **scatterplot**. You should explore options for fitted line, confidence bands and jittering.
+
+::: {.panel-tabset}
+## Video
+{{< video assets/20250819-jamovi-scatterplot.mp4 >}}
+
+## Scatter plot
+
+![](assets/scatterplot.svg)
+:::
+
+#### Continuous $Y$, categorical $X$
+
+This produces various plots such as the boxplot and violin plot. The categorical variable $X$ is used to group the data.
+
+::: {.panel-tabset}
+## Video
+{{< video assets/20250819-jamovi_flexplot_install.mp4 >}}
+
+## Boxplot
+
+![](assets/boxplot.svg)
+
+## Violin plot
+
+![](assets/violin.svg)
+
+:::
+
+
+#### Continuous $Y$, multiple, multiple $X$
+
+If you add multiple $X$ variables, you can explore more ways to visualise the relationships between the variables. Use **paneling** to create separate plots for each combination of $X$ variables.
+
+::: {.panel-tabset}
+## Video
+Note: the video explores some of the options available for mixed plots and has no specific focus on a single plot type.
+
+{{< video assets/20250819-jamovi-multi-flexplot.mp4 >}}
+
+## Mixed plot
+
+![](assets/mixedplot.svg)
+
+## Faceted plot
+
+![](assets/faceted_plot.svg)
+
+:::
+
+### Attribution
+
+This cheatsheet was developed using resources that are available under a [Creative Commons Attribution 4.0 International license](http://creativecommons.org/licenses/by/4.0/), made available on the [SOLES Open Educational Resources repository](https://github.com/usyd-soles-edu/).
