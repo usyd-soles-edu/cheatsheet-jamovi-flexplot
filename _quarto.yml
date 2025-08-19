@@ -18,7 +18,7 @@ format:
     citation-location: margin
     number-sections: true
     number-depth: 2
-  # assignment-typst: default # enable for pdf output (typst format)
+  assignment-typst: default # enable for pdf output (typst format)
 
 execute:
   freeze: auto
