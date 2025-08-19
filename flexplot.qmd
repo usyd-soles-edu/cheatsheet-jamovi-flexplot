@@ -70,6 +70,16 @@ $$response \sim predictor$$
 #### Single continuous $Y$
 This produces a histogram or a boxplot.
 
+::: {.panel-tabset}
+## Video
+{{< video assets/20250819-jamovi_histogram.mp4 >}}
+
+## Histogram
+
+![](assets/histogram.svg)
+
+:::
+
 #### Continuous $Y$, continuous $X$
 This produces a **scatterplot**. You should explore the options for a fitted line, confidence bands, and jittering.
 
