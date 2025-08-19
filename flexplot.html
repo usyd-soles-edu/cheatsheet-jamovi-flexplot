@@ -8,7 +8,7 @@
 
 <meta name="description" content="The University of Sydney">
 
-<title>Using flexplot to model plots in Jamovi</title>
+<title>Using flexplot to create plots in Jamovi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-de6170985bbc30f470ef4ad2f2b2b87d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-073f107f24add9ef832b43d347ebd653.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -141,7 +141,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Using <code>flexplot</code> to model plots in Jamovi</h1>
+      <h1 class="title">Using <code>flexplot</code> to create plots in Jamovi</h1>
             <p class="subtitle lead">A video cheatsheet</p>
                   <div>
         <div class="description">
@@ -200,13 +200,13 @@ window.Quarto = {
 
 <section id="about" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="about"><span class="header-section-number">1</span> About</h2>
-<p>This cheatsheet provides a quick reference for using the <code>flexplot</code> Module in Jamovi to create plots by specifying a formula. Depending on the variable types and the specified formula, <code>flexplot</code> can generate a variety of plot types, including scatter plots, and box plots, automatically.</p>
+<p>This cheatsheet provides a quick reference for using the <code>flexplot</code> module in Jamovi to create plots by specifying a formula. Depending on the variable types and the specified formula, <code>flexplot</code> can automatically generate a variety of plot types, including scatter plots and box plots.</p>
 <section id="assumed-knowledge" class="level4">
 <h4 class="anchored" data-anchor-id="assumed-knowledge">Assumed knowledge</h4>
 <ul>
-<li>Jamovi has been installed and is ready to use. This cheatsheet uses Jamovi 2.7.4.0.</li>
-<li>Basic understanding of statistical concepts and terminology. For example, understanding the difference between categorical and continuous variables.</li>
-<li>Basic knowledge of how to create model formulas e.g.&nbsp;<span class="math inline">y \sim x</span></li>
+<li>Jamovi is installed and ready to use. This cheatsheet uses Jamovi 2.7.4.0.</li>
+<li>A basic understanding of statistical concepts and terminology, such as the difference between categorical and continuous variables.</li>
+<li>A basic knowledge of how to create model formulae, e.g., <span class="math inline">y \sim x</span>.</li>
 </ul>
 </section>
 </section>
@@ -229,7 +229,7 @@ window.Quarto = {
 <h2 data-number="4" class="anchored" data-anchor-id="import-data"><span class="header-section-number">4</span> Import data</h2>
 <ol type="1">
 <li>Click the <i class="bi bi-list" aria-hidden="true"></i> <strong>hamburger menu</strong> at the top-left of the Jamovi window.</li>
-<li>Select <strong>Open</strong> to open the file dialog.</li>
+<li>Select <strong>Open</strong> to open the file dialogue.</li>
 <li>In the dialogue, navigate to the folder where you saved <code>penguins.csv</code> and click <strong>Open</strong>.</li>
 </ol>
 <div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="assets/20250819-jamovi_open_penguins.mp4"></video></div>
@@ -238,9 +238,9 @@ window.Quarto = {
 <h2 data-number="5" class="anchored" data-anchor-id="plot"><span class="header-section-number">5</span> Plot</h2>
 <section id="recalling-formulae-syntax" class="level3">
 <h3 class="anchored" data-anchor-id="recalling-formulae-syntax">Recalling formulae syntax</h3>
-<p>In most cases, general linear models can be described using a standardised formula syntax. For a response variable that is influenced by a certain predictor variable, the formula would be:</p>
+<p>In most cases, general linear models can be described using a standardised formula syntax. For a response variable that is influenced by a predictor variable, the formula would be:</p>
 <p><span class="math display">Y \sim X</span></p>
-<p>which corressponds to the statement</p>
+<p>which corresponds to the statement</p>
 <blockquote class="blockquote">
 <p>The response <span class="math inline">Y</span> is predicted by <span class="math inline">X</span></p>
 </blockquote>
@@ -250,8 +250,8 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="plotting">Plotting</h3>
 <ol type="1">
 <li>In the <strong>Analysis</strong> tab, click on the <strong>Flexplot</strong> option.</li>
-<li>Select the <strong>response variable</strong> and drag it to the “Outcome variable” box.</li>
-<li>Select the <strong>predictor variable</strong> and drag it to the “Predictor variable” box.</li>
+<li>Select the <strong>response variable</strong> and drag it to the ‘Outcome variable’ box.</li>
+<li>Select the <strong>predictor variable</strong> and drag it to the ‘Predictor variable’ box.</li>
 <li>Tinker with the plot options to customise the behaviour of the plot.</li>
 </ol>
 </section>
@@ -259,18 +259,29 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="examples">Examples</h3>
 <section id="single-continuous-y" class="level4">
 <h4 class="anchored" data-anchor-id="single-continuous-y">Single continuous <span class="math inline">Y</span></h4>
-<p>This produces a histogram or boxplot</p>
+<p>This produces a histogram or a boxplot.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Video</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Histogram</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="assets/20250819-jamovi_histogram.mp4"></video></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><img src="assets/histogram.svg" class="img-fluid"></p>
+</div>
+</div>
+</div>
 </section>
 <section id="continuous-y-continuous-x" class="level4">
 <h4 class="anchored" data-anchor-id="continuous-y-continuous-x">Continuous <span class="math inline">Y</span>, continuous <span class="math inline">X</span></h4>
-<p>This produces a <strong>scatterplot</strong>. You should explore options for fitted line, confidence bands and jittering.</p>
+<p>This produces a <strong>scatterplot</strong>. You should explore the options for a fitted line, confidence bands, and jittering.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Video</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Scatter plot</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Video</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Scatter plot</a></li></ul>
 <div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="assets/20250819-jamovi-scatterplot.mp4"></video></div>
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="assets/20250819-jamovi-scatterplot.mp4"></video></div>
 </div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <p><img src="assets/scatterplot.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -278,36 +289,36 @@ window.Quarto = {
 </section>
 <section id="continuous-y-categorical-x" class="level4">
 <h4 class="anchored" data-anchor-id="continuous-y-categorical-x">Continuous <span class="math inline">Y</span>, categorical <span class="math inline">X</span></h4>
-<p>This produces various plots such as the boxplot and violin plot. The categorical variable <span class="math inline">X</span> is used to group the data.</p>
+<p>This produces various plots, such as the boxplot and the violin plot. The categorical variable <span class="math inline">X</span> is used to group the data.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Video</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Boxplot</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Violin plot</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Video</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Boxplot</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Violin plot</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="assets/20250819-jamovi_flexplot_install.mp4"></video></div>
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="quarto-video"><video id="video_shortcode_videojs_video5" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="assets/20250819-jamovi-boxplot.mp4"></video></div>
 </div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <p><img src="assets/boxplot.svg" class="img-fluid"></p>
 </div>
-<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <p><img src="assets/violin.svg" class="img-fluid"></p>
 </div>
 </div>
 </div>
 </section>
-<section id="continuous-y-multiple-multiple-x" class="level4">
-<h4 class="anchored" data-anchor-id="continuous-y-multiple-multiple-x">Continuous <span class="math inline">Y</span>, multiple, multiple <span class="math inline">X</span></h4>
-<p>If you add multiple <span class="math inline">X</span> variables, you can explore more ways to visualise the relationships between the variables. Use <strong>paneling</strong> to create separate plots for each combination of <span class="math inline">X</span> variables.</p>
+<section id="continuous-y-multiple-x" class="level4">
+<h4 class="anchored" data-anchor-id="continuous-y-multiple-x">Continuous <span class="math inline">Y</span>, multiple <span class="math inline">X</span></h4>
+<p>If you add multiple <span class="math inline">X</span> variables, you can explore more ways to visualise the relationships between them. Use <strong>panelling</strong> to create separate plots for each combination of <span class="math inline">X</span> variables.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Video</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Mixed plot</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Faceted plot</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Video</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Mixed plot</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Faceted plot</a></li></ul>
 <div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Note: the video explores some of the options available for mixed plots and has no specific focus on a single plot type.</p>
-<div class="quarto-video"><video id="video_shortcode_videojs_video5" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="assets/20250819-jamovi-multi-flexplot.mp4"></video></div>
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Note: The video explores some of the options available for mixed plots and has no specific focus on a single plot type.</p>
+<div class="quarto-video"><video id="video_shortcode_videojs_video6" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="assets/20250819-jamovi-multi-flexplot.mp4"></video></div>
 </div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
 <p><img src="assets/mixedplot.svg" class="img-fluid"></p>
 </div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
 <p><img src="assets/faceted_plot.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -316,7 +327,7 @@ window.Quarto = {
 </section>
 <section id="attribution" class="level3">
 <h3 class="anchored" data-anchor-id="attribution">Attribution</h3>
-<p>This cheatsheet was developed using resources that are available under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a>, made available on the <a href="https://github.com/usyd-soles-edu/">SOLES Open Educational Resources repository</a>.</p>
+<p>This cheatsheet was developed using resources that are available under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International license</a> and made available on the <a href="https://github.com/usyd-soles-edu/">SOLES Open Educational Resources repository</a>.</p>
 
 
 </section>
@@ -728,6 +739,7 @@ window.Quarto = {
 <script>videojs(video_shortcode_videojs_video3);</script>
 <script>videojs(video_shortcode_videojs_video4);</script>
 <script>videojs(video_shortcode_videojs_video5);</script>
+<script>videojs(video_shortcode_videojs_video6);</script>
 
 
 

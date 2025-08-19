@@ -2,43 +2,43 @@
   {
     "objectID": "flexplot.html",
     "href": "flexplot.html",
-    "title": "Using flexplot to model plots in Jamovi",
+    "title": "Using flexplot to create plots in Jamovi",
     "section": "",
-    "text": "This cheatsheet provides a quick reference for using the flexplot Module in Jamovi to create plots by specifying a formula. Depending on the variable types and the specified formula, flexplot can generate a variety of plot types, including scatter plots, and box plots, automatically.\n\n\n\nJamovi has been installed and is ready to use. This cheatsheet uses Jamovi 2.7.4.0.\nBasic understanding of statistical concepts and terminology. For example, understanding the difference between categorical and continuous variables.\nBasic knowledge of how to create model formulas e.g. y \\sim x"
+    "text": "This cheatsheet provides a quick reference for using the flexplot module in Jamovi to create plots by specifying a formula. Depending on the variable types and the specified formula, flexplot can automatically generate a variety of plot types, including scatter plots and box plots.\n\n\n\nJamovi is installed and ready to use. This cheatsheet uses Jamovi 2.7.4.0.\nA basic understanding of statistical concepts and terminology, such as the difference between categorical and continuous variables.\nA basic knowledge of how to create model formulae, e.g., y \\sim x."
   },
   {
     "objectID": "flexplot.html#about",
     "href": "flexplot.html#about",
-    "title": "Using flexplot to model plots in Jamovi",
+    "title": "Using flexplot to create plots in Jamovi",
     "section": "",
-    "text": "This cheatsheet provides a quick reference for using the flexplot Module in Jamovi to create plots by specifying a formula. Depending on the variable types and the specified formula, flexplot can generate a variety of plot types, including scatter plots, and box plots, automatically.\n\n\n\nJamovi has been installed and is ready to use. This cheatsheet uses Jamovi 2.7.4.0.\nBasic understanding of statistical concepts and terminology. For example, understanding the difference between categorical and continuous variables.\nBasic knowledge of how to create model formulas e.g. y \\sim x"
+    "text": "This cheatsheet provides a quick reference for using the flexplot module in Jamovi to create plots by specifying a formula. Depending on the variable types and the specified formula, flexplot can automatically generate a variety of plot types, including scatter plots and box plots.\n\n\n\nJamovi is installed and ready to use. This cheatsheet uses Jamovi 2.7.4.0.\nA basic understanding of statistical concepts and terminology, such as the difference between categorical and continuous variables.\nA basic knowledge of how to create model formulae, e.g., y \\sim x."
   },
   {
     "objectID": "flexplot.html#data",
     "href": "flexplot.html#data",
-    "title": "Using flexplot to model plots in Jamovi",
+    "title": "Using flexplot to create plots in Jamovi",
     "section": "2 Data",
     "text": "2 Data\nWe will use the well-known penguins dataset from the palmerpenguins R package. The dataset has been exported from the package in a format that Jamovi can read (.csv).\n  Download penguins.csv"
   },
   {
     "objectID": "flexplot.html#install-the-flexplot-module",
     "href": "flexplot.html#install-the-flexplot-module",
-    "title": "Using flexplot to model plots in Jamovi",
+    "title": "Using flexplot to create plots in Jamovi",
     "section": "3 Install the flexplot module",
     "text": "3 Install the flexplot module\nIf you have not already installed the flexplot module, you can do so by following these steps:\n\nOpen the Modules tab in Jamovi.\nClick on Jamovi Library.\nSearch for flexplot and click Install."
   },
   {
     "objectID": "flexplot.html#import-data",
     "href": "flexplot.html#import-data",
-    "title": "Using flexplot to model plots in Jamovi",
+    "title": "Using flexplot to create plots in Jamovi",
     "section": "4 Import data",
-    "text": "4 Import data\n\nClick the  hamburger menu at the top-left of the Jamovi window.\nSelect Open to open the file dialog.\nIn the dialogue, navigate to the folder where you saved penguins.csv and click Open."
+    "text": "4 Import data\n\nClick the  hamburger menu at the top-left of the Jamovi window.\nSelect Open to open the file dialogue.\nIn the dialogue, navigate to the folder where you saved penguins.csv and click Open."
   },
   {
     "objectID": "flexplot.html#plot",
     "href": "flexplot.html#plot",
-    "title": "Using flexplot to model plots in Jamovi",
+    "title": "Using flexplot to create plots in Jamovi",
     "section": "5 Plot",
-    "text": "5 Plot\n\nRecalling formulae syntax\nIn most cases, general linear models can be described using a standardised formula syntax. For a response variable that is influenced by a certain predictor variable, the formula would be:\nY \\sim X\nwhich corressponds to the statement\n\nThe response Y is predicted by X\n\nresponse \\sim predictor\n\n\nPlotting\n\nIn the Analysis tab, click on the Flexplot option.\nSelect the response variable and drag it to the “Outcome variable” box.\nSelect the predictor variable and drag it to the “Predictor variable” box.\nTinker with the plot options to customise the behaviour of the plot.\n\n\n\nExamples\n\nSingle continuous Y\nThis produces a histogram or boxplot\n\n\nContinuous Y, continuous X\nThis produces a scatterplot. You should explore options for fitted line, confidence bands and jittering.\n\nVideoScatter plot\n\n\n\n\n\n\n\n\n\n\n\nContinuous Y, categorical X\nThis produces various plots such as the boxplot and violin plot. The categorical variable X is used to group the data.\n\nVideoBoxplotViolin plot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContinuous Y, multiple, multiple X\nIf you add multiple X variables, you can explore more ways to visualise the relationships between the variables. Use paneling to create separate plots for each combination of X variables.\n\nVideoMixed plotFaceted plot\n\n\nNote: the video explores some of the options available for mixed plots and has no specific focus on a single plot type.\n\n\n\n\n\n\n\n\n\n\n\n\n\nAttribution\nThis cheatsheet was developed using resources that are available under a Creative Commons Attribution 4.0 International license, made available on the SOLES Open Educational Resources repository."
+    "text": "5 Plot\n\nRecalling formulae syntax\nIn most cases, general linear models can be described using a standardised formula syntax. For a response variable that is influenced by a predictor variable, the formula would be:\nY \\sim X\nwhich corresponds to the statement\n\nThe response Y is predicted by X\n\nresponse \\sim predictor\n\n\nPlotting\n\nIn the Analysis tab, click on the Flexplot option.\nSelect the response variable and drag it to the ‘Outcome variable’ box.\nSelect the predictor variable and drag it to the ‘Predictor variable’ box.\nTinker with the plot options to customise the behaviour of the plot.\n\n\n\nExamples\n\nSingle continuous Y\nThis produces a histogram or a boxplot.\n\nVideoHistogram\n\n\n\n\n\n\n\n\n\n\n\nContinuous Y, continuous X\nThis produces a scatterplot. You should explore the options for a fitted line, confidence bands, and jittering.\n\nVideoScatter plot\n\n\n\n\n\n\n\n\n\n\n\nContinuous Y, categorical X\nThis produces various plots, such as the boxplot and the violin plot. The categorical variable X is used to group the data.\n\nVideoBoxplotViolin plot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nContinuous Y, multiple X\nIf you add multiple X variables, you can explore more ways to visualise the relationships between them. Use panelling to create separate plots for each combination of X variables.\n\nVideoMixed plotFaceted plot\n\n\nNote: The video explores some of the options available for mixed plots and has no specific focus on a single plot type.\n\n\n\n\n\n\n\n\n\n\n\n\n\nAttribution\nThis cheatsheet was developed using resources that are available under a Creative Commons Attribution 4.0 International license and made available on the SOLES Open Educational Resources repository."
   }
 ]
